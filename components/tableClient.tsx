@@ -27,101 +27,42 @@ export default function DenseTable() {
   };
 
   return (
-    <div style={{ marginTop: "20px", marginLeft: "20px", marginRight: "20px", overflowX: "auto" }}>
-      <table
-        style={{ width: "100%", borderCollapse: "collapse", minWidth: "650px" }}
-      >
-        <thead>
+    <div className="px-5 pt-5 overflow-x-auto">
+      <table className="w-full border-collapse min-w-[650px]">
+        <thead className="text-xs uppercase dark:bg-gray-700 dark:text-white">
           <tr>
-            <th
-              style={{
-                textAlign: "left",
-                padding: "8px",
-                border: "1px solid #ddd",
-              }}
-            >
+            <th className="text-left p-2 border border-gray-300">
               Dessert (100g serving)
             </th>
-            <th
-              style={{
-                textAlign: "right",
-                padding: "8px",
-                border: "1px solid #ddd",
-              }}
-            >
-              Calories
-            </th>
-            <th
-              style={{
-                textAlign: "right",
-                padding: "8px",
-                border: "1px solid #ddd",
-              }}
-            >
+            <th className="text-right p-2 border border-gray-300">Calories</th>
+            <th className="text-right p-2 border border-gray-300">
               Fat&nbsp;(g)
             </th>
-            <th
-              style={{
-                textAlign: "right",
-                padding: "8px",
-                border: "1px solid #ddd",
-              }}
-            >
+            <th className="text-right p-2 border border-gray-300">
               Carbs&nbsp;(g)
             </th>
-            <th
-              style={{
-                textAlign: "right",
-                padding: "8px",
-                border: "1px solid #ddd",
-              }}
-            >
+            <th className="text-right p-2 border border-gray-300">
               Protein&nbsp;(g)
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-xs">
           {rows.map((row) => (
-            <tr key={row.name} style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px", border: "1px solid #ddd" }}>
-                {row.name}
-              </td>
+            <tr key={row.name} className="border-b border-gray-300">
+              <td className="p-2 border border-gray-300">{row.name}</td>
               <td
-                style={{
-                  textAlign: "right",
-                  padding: "8px",
-                  border: "1px solid #ddd",
-                  cursor: "pointer",
-                }}
+                className="text-right p-2 border border-gray-300 cursor-pointer"
                 onClick={() => handleCellClick(row.calories, "Calories")}
               >
                 {row.calories}
               </td>
-              <td
-                style={{
-                  textAlign: "right",
-                  padding: "8px",
-                  border: "1px solid #ddd",
-                }}
-              >
+              <td className="text-right p-2 border border-gray-300">
                 {row.fat}
               </td>
-              <td
-                style={{
-                  textAlign: "right",
-                  padding: "8px",
-                  border: "1px solid #ddd",
-                }}
-              >
+              <td className="text-right p-2 border border-gray-300">
                 {row.carbs}
               </td>
-              <td
-                style={{
-                  textAlign: "right",
-                  padding: "8px",
-                  border: "1px solid #ddd",
-                }}
-              >
+              <td className="text-right p-2 border border-gray-300">
                 {row.protein}
               </td>
             </tr>

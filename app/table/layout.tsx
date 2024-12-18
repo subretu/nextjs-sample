@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
       <div
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased px-4 pt-8`}
       >
         {children}
       </div>
