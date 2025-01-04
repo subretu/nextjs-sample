@@ -1,19 +1,10 @@
-import { LoginButton, LogoutButton } from "@/components/buttons";
+"use client";
+import LoginForm from "@/components/login";
 
-export default async function Home() {
+export default function Login() {
   return (
-    <main
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "70vh",
-      }}
-    >
-      <div>
-        <LoginButton />
-        <LogoutButton />
-      </div>
-    </main>
+    <div>
+      <LoginForm />
+    </div>
   );
 }
