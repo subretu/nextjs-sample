@@ -1,4 +1,4 @@
-import TableClient from "../../components/tableClient";
+import TableClient from "@/components/tableClient";
 
 export default function DenseTableServer() {
   return (
