@@ -10,7 +10,7 @@ export default function RootLayout({
       <body>
         <header>
           <nav>
-            <a href="/">Home</a>
+            <a href="/">Home</a>s<br />
             <a href="/protected">Protected Page</a>
           </nav>
         </header>
