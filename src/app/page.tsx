@@ -1,6 +1,5 @@
 import { LoginButton } from "@/components/buttons";
 import { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Sample APP',
@@ -14,13 +13,6 @@ export default function HomePage() {
       <p>
         <LoginButton></LoginButton>
       </p>
-      <Link
-        href="http://localhost:3001/table"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Home
-      </Link>
     </div>
   );
 }
