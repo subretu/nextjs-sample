@@ -13,17 +13,24 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model customer_user {
-  id        Int      @id
+model CustomerUser {
+  user_id   Int @id @map("user_id")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   email   String?
   name    String?
+  customer   Customer @relation(fields: [customer_id], references: [customer_id])
+  customer_id Int @unique @map("customer_id")
+
+  @@map("customer_user")
 }
 
-model customer {
-  id        Int      @id
+model Customer {
+  customer_id Int @id  @map("customer_id")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  name    String?
+  customer_name    String?
+  customeruser CustomerUser?
+
+  @@map("customer")
 }
