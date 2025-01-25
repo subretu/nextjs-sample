@@ -14,7 +14,7 @@ export default function DenseTableServer() {
       <h1 className="px-5">Interactive Table</h1>
       <TableClient />
       <Link
-        href={`http://localhost:3001/table/${id}`}
+        href={`http://localhost:3000/table/${id}`}
         rel="noopener noreferrer"
         target="_blank"
       >
